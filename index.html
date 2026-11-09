@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ListFound — Hand-built B2B lead lists, verified row by row</title>
+<meta name="description" content="50 real businesses matching your ideal customer, each verified by hand with public contact details and source links. Spreadsheet in 48 hours. $25.">
+<style>
+  :root{ --bg:#f6f7f9; --ink:#14213d; --accent:#2b4acb; --muted:#5a6478; --line:#dde1e8; --card:#ffffff; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+
+  header{padding:22px 0;border-bottom:1px solid var(--line);background:var(--card)}
+  .brand{font-size:1.2rem;font-weight:800;letter-spacing:-.02em}
+  .brand span{color:var(--accent)}
+  .brandtag{float:right;color:var(--muted);font-size:.82rem;padding-top:5px}
+
+  .hero{padding:40px 0 26px;display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:start}
+  h1{font-size:1.9rem;line-height:1.18;margin:0 0 12px;font-weight:800;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:.97rem;margin:0 0 18px}
+
+  .sample{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:.78rem}
+  .sample .cap{background:#eef1f7;padding:7px 12px;color:var(--muted);font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.68rem}
+  .sample table{width:100%;border-collapse:collapse}
+  .sample td,.sample th{padding:7px 10px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+  .sample th{color:var(--muted);font-weight:600;border-top:none}
+  .sample .src{color:var(--accent);text-decoration:none}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 30px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+  .step b{display:block;font-size:.88rem;margin-bottom:5px}
+  .step p{margin:0;color:var(--muted);font-size:.83rem}
+
+  .offer{background:var(--ink);color:#fff;border-radius:10px;padding:26px 28px;margin-bottom:40px;
+    display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+  .offer .price{font-size:1.9rem;font-weight:800}
+  .offer .what{font-size:.9rem;color:#c3cbdd;margin-top:4px}
+  .buy{background:var(--accent);color:#fff;border:none;padding:13px 26px;font-size:.95rem;font-weight:700;border-radius:6px;cursor:pointer;white-space:nowrap}
+  .buy:hover{background:#3d5ae0}
+  .fine{grid-column:1/-1;color:#98a2bb;font-size:.76rem;margin:0}
+
+  .faq{padding-bottom:36px}
+  .faq h2{font-size:1.05rem;margin:0 0 12px}
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:13px 16px;margin-bottom:9px}
+  .faq summary{cursor:pointer;font-weight:600;font-size:.9rem}
+  .faq p{color:var(--muted);font-size:.86rem;margin:8px 0 0}
+
+  footer{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--muted);font-size:.79rem}
+
+  .modal{position:fixed;inset:0;background:rgba(20,33,61,.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:10}
+  .modal.open{display:flex}
+  .modal .card{background:#fff;max-width:440px;width:100%;padding:26px;border-radius:10px}
+  .modal h3{margin:0 0 8px;font-size:1.08rem}
+  .modal p{font-size:.88rem;color:var(--muted);margin:0 0 16px}
+  .modal a{color:var(--accent)}
+  .modal .close{background:none;border:1px solid var(--line);padding:8px 18px;font-size:.82rem;border-radius:6px;cursor:pointer;color:var(--ink)}
+
+  @media (max-width:680px){
+    .hero{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .offer{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">List<span>Found</span></div>
+  <div class="brandtag">Hand-built B2B lead lists</div>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Fifty businesses that actually match your customer profile. Verified by hand.</h1>
+      <p class="sub">You describe your ideal customer - trade, size, city, anything public. We build a list of 50 real, currently operating businesses that match, each with a public contact and the link to the source, so you can check every row yourself.</p>
+    </div>
+    <div class="sample">
+      <div class="cap">What a row looks like (illustrative sample)</div>
+      <table>
+        <tr><th>Business</th><th>Contact</th><th>Source</th></tr>
+        <tr><td>Example Bakery Co.<br><span style="color:var(--muted)">Bakery &middot; Austin, TX</span></td><td>Public email on site</td><td><a class="src" href="#" onclick="return false">source link</a></td></tr>
+        <tr><td>Sample Dental Group<br><span style="color:var(--muted)">Dental &middot; Austin, TX</span></td><td>Public phone + form</td><td><a class="src" href="#" onclick="return false">source link</a></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="step"><b>1. Describe your buyer</b><p>"Independent coffee roasters in the Pacific Northwest" is enough. The more specific, the better the list.</p></div>
+    <div class="step"><b>2. We research live</b><p>Real lookup against public directories, maps, and business sites - checked this week, not pulled from a stale database.</p></div>
+    <div class="step"><b>3. You get a spreadsheet</b><p>50 rows: name, location, public contact, source link. Delivered within 48 hours. Check any row against its source.</p></div>
+  </section>
+
+  <section class="offer">
+    <div>
+      <div class="price">$25 <span style="font-size:.9rem;font-weight:400;color:#c3cbdd">one-time</span></div>
+      <div class="what">50 verified, source-linked leads matching your profile &middot; spreadsheet in 48 hours</div>
+    </div>
+    <button type="button" class="buy" id="buybtn">Order a list - $25</button>
+    <p class="fine">Nothing is charged when you click. Public sources only - we never scrape behind logins, never sell personal data.</p>
+  </section>
+
+  <section class="faq">
+    <h2>Straight answers</h2>
+    <details><summary>Where do the leads come from?</summary><p>Public sources: business directories, maps listings, company websites, licensing registries. Every row includes its source link so you can verify it. Nothing from behind a login, nothing personal.</p></details>
+    <details><summary>How is this different from buying a database?</summary><p>Databases are built once and decay - by some estimates a quarter of B2B contact data goes stale within months. Your list is researched after you order, against what is public right now.</p></details>
+    <details><summary>What if the list doesn't match my brief?</summary><p>Tell us which rows missed and why; we replace them. If the brief itself can't be met from public sources, we tell you before charging, not after.</p></details>
+  </section>
+
+  <footer>
+    <p>ListFound is an independent research service. Leads contain business-public information only, with sources. You are responsible for following outreach laws (CAN-SPAM, TCPA) in how you use any list.</p>
+    <p>&copy; 2026 ListFound.</p>
+  </footer>
+</div>
+
+<div class="modal" id="buymodal" role="dialog" aria-modal="true">
+  <div class="card">
+    <h3>We're not taking payment yet</h3>
+    <p>ListFound is a new service and we bring on early customers one at a time. To join the early list, email <a href="mailto:mfcyxd@mail.instinct.com" id="waitlistlink">mfcyxd@mail.instinct.com</a> with your ideal-customer description - first lists are discounted while we set up billing. Nothing is charged on this page.</p>
+    <button type="button" class="close" id="buyclose">Close</button>
+  </div>
+</div>
+
+<script>
+function track(what){
+  try{
+    if(window.goatcounter && window.goatcounter.count){
+      window.goatcounter.count({path: what, title: what, event: true});
+    }
+    var k = 'lf_' + what;
+    localStorage.setItem(k, (parseInt(localStorage.getItem(k)||'0',10)+1).toString());
+  }catch(e){}
+}
+var modal = document.getElementById('buymodal');
+document.getElementById('buybtn').addEventListener('click', function(){
+  track('buy-intent');
+  modal.classList.add('open');
+});
+document.getElementById('buyclose').addEventListener('click', function(){ modal.classList.remove('open'); });
+modal.addEventListener('click', function(e){ if(e.target === modal){ modal.classList.remove('open'); } });
+var wl = document.getElementById('waitlistlink');
+if(wl){ wl.addEventListener('click', function(){ track('waitlist-click'); }); }
+</script>
+<script data-goatcounter="https://listfound.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
